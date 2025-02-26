@@ -4,8 +4,8 @@
 This project is a **collaboration between Bloomberg and NYU** to develop a machine learning-based model for detecting **stock price anomalies in the U.S. equity market.** By leveraging **time-series forecasting techniques and cross-sectional anomaly detection models**, we aim to identify irregularities in stock returns that could indicate market inefficiencies, trading opportunities, or underlying risks.
 
 Our approach integrates two complementary machine learning models:
-1. **Hybrid LSTM-GARCH Model** – A time-series-based model that captures stock return anomalies by predicting expected returns and estimating volatility.
-2. **Cross-Sectional Isolation Forest Model** – An unsupervised learning model that identifies anomalies among stocks by analyzing liquidity, momentum, and volatility features.
+1. **Cross-Sectional Isolation Forest Model** – An unsupervised learning model that identifies anomalies among stocks by analyzing liquidity, momentum, and volatility features.
+2. **Hybrid LSTM-GARCH Model** – A time-series-based model that captures stock return anomalies by predicting expected returns and estimating volatility.
 
 This research is intended to **enhance financial risk assessment** and **improve market efficiency analysis**, supporting traders, investors, and portfolio managers in making data-driven decisions.
 
@@ -40,22 +40,27 @@ This approach captures **unusual stock price movements** while filtering out nor
 <img width="636" alt="image" src="https://github.com/user-attachments/assets/69586561-b2f5-4aea-8811-5848495a7ea5" />
 
 ## **Folder Structure**
-Stock_Anomaly_Detection
-│── README.md                   # Project documentation
-│── Capstone_final_paper.pdf     # Research paper detailing methodology and findings
-│── data/                        # Dataset (Russell 2000 stock data)
-│   │── Russell2000_total.csv    # Stock price data for Russell 2000 index
-│   │── Russell2000_error.csv    # CAPM residual error terms
-│   │── feature_data/            # Processed feature files for each stock
-│── models/                      # Trained machine learning models
-│── feature_calculation.py       # Extracts financial features from stock price data
-│── feature_generator.py         # Computes technical indicators for anomaly detection
-│── detection_engine.py          # Implements the Isolation Forest anomaly detection model
-│── CAPM.py                      # Calculates residual errors using the Capital Asset Pricing Model (CAPM)
-│── data_loader.py               # Loads and preprocesses stock data
-│── result_analysis.py           # Evaluates anomaly detection results and generates reports
-│── outputs/                     # Model predictions and evaluation reports
-│── requirements.txt             # List of dependencies needed to run the project
+
+### **1. Data**
+Contains the dataset used for the analysis. (data downloaded from Bloomberg terminal)
+- `Russell2000_total.csv` - Stock price data for Russell 2000 index.
+- `Russell2000_error.csv` - CAPM residual error terms.
+- `feature_data/` - Processed feature files for each stock.
+
+### **2. Models**
+Contains Python scripts used for data processing, feature extraction, and model implementation:
+- `feature_calculation.py` - Extracts financial features from stock price data.
+- `feature_generator.py` - Computes technical indicators for anomaly detection.
+- `detection_engine.py` - Implements the Isolation Forest anomaly detection model.
+- `CAPM.py` - Calculates residual errors using the Capital Asset Pricing Model (CAPM).
+- `data_loader.py` - Loads and preprocesses stock data.
+
+### **3 Outputs**
+Stores model predictions and evaluation reports.
+- `result_analysis.py` - Evaluates anomaly detection results and generates reports.
+- `Capstone_final_paper.pdf`  -Final Report for the research.
+
+
 
 ## **Installation and Dependencies**
 
